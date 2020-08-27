@@ -1,7 +1,8 @@
-package com.andresmedina.android.catsfacts
+package com.andresmedina.android.catsfacts.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.andresmedina.android.catsfacts.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
