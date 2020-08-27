@@ -4,7 +4,8 @@ import androidx.lifecycle.ViewModel
 import com.andresmedina.android.catsfacts.di.component.DaggerViewModelInjector
 import com.andresmedina.android.catsfacts.di.component.ViewModelInjector
 import com.andresmedina.android.catsfacts.di.module.NetworkModule
-import com.andresmedina.android.catsfacts.viewmodel.posts.PostViewModel
+import com.andresmedina.android.catsfacts.viewmodel.posts.PostListViewModel
+import com.andresmedina.android.catsfacts.viewmodel.user.UserListViewModel
 
 abstract class BaseViewModel : ViewModel() {
 
@@ -17,9 +18,10 @@ abstract class BaseViewModel : ViewModel() {
         inject()
     }
 
-    private fun inject(){
-        when(this) {
-            is PostViewModel -> injector.inject(this)
+    private fun inject() {
+        when (this) {
+            is PostListViewModel -> injector.inject(this)
+            is UserListViewModel -> injector.inject(this)
         }
     }
 }

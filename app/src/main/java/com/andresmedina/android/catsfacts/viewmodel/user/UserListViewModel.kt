@@ -1,37 +1,35 @@
-package com.andresmedina.android.catsfacts.viewmodel.posts
+package com.andresmedina.android.catsfacts.viewmodel.user
 
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import com.andresmedina.android.catsfacts.base.BaseViewModel
-import com.andresmedina.android.catsfacts.data.model.Post
-import com.andresmedina.android.catsfacts.network.PostApiService
+import com.andresmedina.android.catsfacts.data.model.User
+import com.andresmedina.android.catsfacts.network.UserApiService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class PostViewModel : BaseViewModel() {
-
+class UserListViewModel : BaseViewModel() {
     @Inject
-    lateinit var postApiService: PostApiService
+    private lateinit var userApiService: UserApiService
 
-    private val loadingVisibility = MutableLiveData<Int>()
+    private val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
 
     private lateinit var subscription: Disposable
 
-    fun getPosts(userId: Int) {
-        subscription = postApiService.getPostsByUserId(userId)
+    fun getUsers() {
+        subscription = userApiService.getUsers()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .doOnSubscribe { onStartRequest() }
             .subscribe(
-                { result ->
-                    onSuccessRequest(result)
+                { users ->
+                    onSuccessRequest(users)
                     onFinishRequest()
-
                 },
                 { error ->
-                    onFailureRequest(error.message.toString())
+                    onFailureRequest(error.message!!)
                     onFinishRequest()
                 })
     }
@@ -44,16 +42,11 @@ class PostViewModel : BaseViewModel() {
         loadingVisibility.postValue(View.GONE)
     }
 
-    private fun onSuccessRequest(posts: List<Post>) {
+    private fun onSuccessRequest(users: List<User>) {
 
     }
 
     private fun onFailureRequest(message: String) {
 
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        subscription.dispose();
     }
 }
