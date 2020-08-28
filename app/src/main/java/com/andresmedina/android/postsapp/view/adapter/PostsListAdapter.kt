@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.andresmedina.android.postsapp.R
 import com.andresmedina.android.postsapp.data.model.Post
 import com.andresmedina.android.postsapp.databinding.CardviewPostBinding
-import com.andresmedina.android.postsapp.viewmodel.posts.PostViewModel
+import com.andresmedina.android.postsapp.viewmodel.post.PostViewModel
 
 class PostsListAdapter: RecyclerView.Adapter<PostsListAdapter.ViewHolder>() {
     lateinit var posts: List<Post>

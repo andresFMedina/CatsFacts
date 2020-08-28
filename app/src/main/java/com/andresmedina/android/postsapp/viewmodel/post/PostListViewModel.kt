@@ -1,4 +1,4 @@
-package com.andresmedina.android.postsapp.viewmodel.posts
+package com.andresmedina.android.postsapp.viewmodel.post
 
 import android.util.Log
 import android.view.View

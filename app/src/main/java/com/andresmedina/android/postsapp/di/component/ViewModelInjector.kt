@@ -1,7 +1,7 @@
 package com.andresmedina.android.postsapp.di.component
 
 import com.andresmedina.android.postsapp.di.module.NetworkModule
-import com.andresmedina.android.postsapp.viewmodel.posts.PostListViewModel
+import com.andresmedina.android.postsapp.viewmodel.post.PostListViewModel
 import com.andresmedina.android.postsapp.viewmodel.user.UserListViewModel
 import dagger.Component
 import javax.inject.Singleton
