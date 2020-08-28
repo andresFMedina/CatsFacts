@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="postViewModel"
             type="com.andresmedina.android.postsapp.viewmodel.post.PostViewModel" />
@@ -30,17 +30,15 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
                 android:text="@{postViewModel.title}"
-                tool:text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" />
+                android:textColor="@color/colorPrimary" />
 
             <TextView
                 android:id="@+id/body"
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{postViewModel.body}"
-                tool:text="quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto" />
+                android:text="@{postViewModel.body}" />
 
         </LinearLayout>
 

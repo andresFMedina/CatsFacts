@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.andresmedina.android.postsapp.base.BaseViewModel
 import com.andresmedina.android.postsapp.data.model.User
 import com.andresmedina.android.postsapp.network.UserApiService
+import com.andresmedina.android.postsapp.util.startPostActivity
 import com.andresmedina.android.postsapp.view.adapter.UsersListAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

@@ -119,8 +119,8 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:text="@string/view_posts"
-                    android:textColor="@color/colorPrimary" />
-                    <!--android:onClick="@{(v) -> userViewModel.goToPostActivity(v)}"-->
+                    android:textColor="@color/colorPrimary"
+                    android:onClick="@{(v) -> userViewModel.goToPostActivity(v)}"/>
 
 
             </RelativeLayout>
