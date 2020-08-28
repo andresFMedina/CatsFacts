@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Cats Facts</string>
+    <string name="app_name">Posts</string>
+    <string name="view_posts">View posts</string>
 </resources>
