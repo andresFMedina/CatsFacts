@@ -16,7 +16,7 @@
         android:layout_marginTop="@dimen/layout_vertical_margin">
 
         <LinearLayout
-            android:id="@+id/contentCard"
+            android:id="@+id/card_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -42,12 +42,12 @@
                 tool:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:id="@+id/imagePhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:src="@drawable/ic_call_black_24dp"
-                    app:tint="@color/colorPrimary" />
+                    app:tint="@color/colorPrimary"
+                    android:contentDescription="@string/phone_icon" />
 
                 <TextView
                     android:id="@+id/phone"
@@ -60,7 +60,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/contentEmail"
+                android:id="@+id/content_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -70,10 +70,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:src="@drawable/ic_email_black_24dp"
-                    app:tint="@color/colorPrimary" />
+                    app:tint="@color/colorPrimary"
+                    android:contentDescription="@string/email_icon" />
 
                 <TextView
-                    android:id="@+id/website"
+                    android:id="@+id/email"
                     style="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -84,6 +85,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/content_web"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -92,11 +94,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
-                    android:src="@drawable/ic_web_black_24dp"
+                    android:src="@drawable/ic_public_black_24dp"
                     app:tint="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/website"
                     style="@style/TextAppearance.AppCompat.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -107,7 +109,6 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/contentBtnViewPost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

@@ -14,6 +14,7 @@ class PostActivity : AppCompatActivity() {
 
     private lateinit var postListViewModel: PostListViewModel
     private lateinit var user: User
+    private val userViewModel = UserViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,12 +24,14 @@ class PostActivity : AppCompatActivity() {
         postListViewModel = ViewModelProvider(this).get(PostListViewModel::class.java)
         user = intent.extras?.getSerializable("user") as User
 
-        val userViewModel = UserViewModel()
-
         binding.postListViewModel = postListViewModel
         binding.userViewModel = userViewModel
 
         userViewModel.bind(user)
         postListViewModel.getPosts(user.id)
+
+        supportActionBar?.title = user.name
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
 }

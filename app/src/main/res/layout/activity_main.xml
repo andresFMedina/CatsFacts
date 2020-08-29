@@ -19,7 +19,7 @@
         tools:context=".view.MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewSearchResults"
+            android:id="@+id/recycler_users"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/layout_vertical_margin"
